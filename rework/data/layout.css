@@ -1,6 +1,6 @@
 :root{
 	/* root variables */
-	--sidebar-size: 20vw;   /* the width of the sidebar */
+	--sidebar-size: 16rem;   /* the width of the sidebar */
 	--topbar-size: 3rem;    /* space above the sidebar */
 	--bottombar-size: 0;    /* space below the sidebar */
 }
@@ -42,9 +42,9 @@
 
 .sidebar:not(.swap) { right: unset !important; }
 
-.sidebar.open { animation: slide-in 0.3s forwards; }
+.sidebar.open { animation: slide-in 0.5s forwards; }
 
-.sidebar:not(.open) { animation: slide-out 0.3s forwards; }
+.sidebar:not(.open) { animation: slide-out 0.5s forwards; }
 
 .sidebar.no-anim { animation-duration: 0s !important; }
 
@@ -64,9 +64,9 @@
 
 .sidebar:not(.swap) ~ .content { right: 0 !important; }
 
-.sidebar.open ~ .content { animation: size-in 0.3s forwards; }
+.sidebar.open ~ .content { animation: size-in 0.5s forwards; }
 
-.sidebar:not(.open) ~ .content { animation: size-out 0.3s forwards; }
+.sidebar:not(.open) ~ .content { animation: size-out 0.5s forwards; }
 
 .sidebar.no-anim ~ .content { animation-duration: 0s !important; }
 

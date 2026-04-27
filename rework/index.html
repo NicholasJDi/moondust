@@ -12,17 +12,21 @@
 
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>MoonDust | Home</title>
-	<link rel="icon" href="data/moondust.png" />
+	<link rel="icon" href="data/moondust.png"/>
 	<meta name="description" content="MoonDust is a cozy Minecraft community of silly Minecraft players. We're all here to have a good time and not take things too seriously :3">
-	<link rel="stylesheet" href="data/style.css"/> 
-	<link rel="stylesheet" href="data/layout.css">
-	<link rel="stylesheet" href="data/layout.css" type="text/css" media="all">
-	<script defer src="data/sidebar.js"></script>
+	<link rel="stylesheet" href="data/style.css" type="text/css" media="all"/> 
+	<link rel="stylesheet" href="data/layout.css" type="text/css" media="all"/>
+	<script defer src="data/sidebar.js"> </script>
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 	<script src="https://kit.fontawesome.com/d73a0531d7.js" crossorigin="anonymous"></script>
 	<script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
 </head>
 <body>	
+	<div class='topbar'>
+		<li><i class="sidebar-toggle fa fa-align-justify"></i></li>
+		<li><img src="data/moondust.png"></li>
+		<li><p>MoonDust</p></li>
+	</div>
 	<div class="sidebar">
 		<a href="index.html">Home</a>
 		<a href="About.html">About</a>
@@ -41,27 +45,18 @@
 		</div>
 		</div>
 	</div>
-	
 	<div class="content">
-		<div class='topbar'>
-		<ul>
-			<li class="sidebar-toggle"><i class="fa fa-align-justify" style="cursor:pointer" onclick="toggleNav()"></i></li>
-			<li><img src="moondust.png"></li>
-			<li><p>MoonDust</p></li>
-		</ul>
-		</div>
-
-	<div id="mainbubbles">
-		<div class="bubbles">
-			<img src="bubbles.png">
-			<img src="bubbles.png">
-			<img src="bubbles.png">
-			<img src="bubbles.png">
-			<img src="bubbles.png">
-			<img src="bubbles.png">
-			<img src="bubbles.png">
-		</div>
-	</div>	
+		<div id="maindust">
+			<div class="dust">
+				<img src="data/dust.png">
+				<img src="data/dust.png">
+				<img src="data/dust.png">
+				<img src="data/dust.png">
+				<img src="data/dust.png">
+				<img src="data/dust.png">
+				<img src="data/dust.png">
+			</div>
+		</div>	
 	
 	<div id="copyMessage" style="display: none; color: white; text-align: center; position: fixed; top: 11.5%; left: 50%; transform: translateX(-50%); background-color: rgba(0, 0, 0, 0.8); color: white; padding: 10px; border-radius: 5px; z-index: 3;">Copied IP</div>
 
