@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MoonDust | About</title>
+    <link href="/style.css" rel="stylesheet" type="text/css" media="all">
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-TZ6FFK0HYT"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-TZ6FFK0HYT');
+</script>
+	    <link rel="icon" href="moondust.png" />
+	    <meta name="description" content="MoonDust is cozy Minecraft server filled with silly players who are all here to have a good time and not take things too seriously! Look at our imbeciles below :3">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script src="https://kit.fontawesome.com/d73a0531d7.js" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
+  </head>
+  <body>
+<div id="mySidenav" class="sidenav">
+  <a href="index.html">Home</a>
+     <a href="About.html">About</a>
+      <a href="staff.html">Staff</a>
+    <a href="https://moondust.craftingstore.net">Store</a>
+  <a href="maps.html">Maps</a>
+  <a href="tinysurvival.html">Tiny Survival</a>
+    <a href="creativePlots.html">Creative Plots</a>
+  <a href="newsletters.html">Newsletters</a>
+  <div class="dropdown">
+    <button class="dropbtn">Guides</button>
+      <div class="dropdown-content">
+  <a href="survivalguide.html">Survival</a>
+  <a href="hubguide.html">Hub</a>
+  <a href="guides.html">All guides</a>
+</div>
+</div>
+
+</div>
+	<div id="main">
+<div class='topbar'>
+<ul>
+  <li class="menu-icon"><i class="fa fa-align-justify" style="cursor:pointer" onclick="toggleNav()"></i></li>
+  <li><img src="moondust.png"></li>
+  <li><p>MoonDust</p></li>
+</ul>
+</div>
+
+<div id="mainbubbles">
+  <div class="bubbles">
+      <img src="bubbles.png">
+      <img src="bubbles.png">
+      <img src="bubbles.png">
+      <img src="bubbles.png">
+      <img src="bubbles.png">
+      <img src="bubbles.png">
+      <img src="bubbles.png">
+  </div>
+</div>	
+<div class="about">
+<h1>About MoonDust </h1>
+<p> MoonDust began in 2016 by LittlePotato and shortly later with the magnificent frogboy. At the time MoonDust's playerbase mostly consisted of LittlePotato's dumb 5th grade class mates. These days, MoonDust is a cozy community of silly Minecraft players. We're all here to have a good time and not take things too seriously :3</p>
+<h2> Player Experiences </h2>
+<p>"Moondust is one of the more friendly and calm servers to find on Minecraft. The players and staff love to interact with the community and have everyone involved in something. Whether you’re a new player or not, you’re always greeted in positive ways." -Flareh </p>
+<p> "Ahem, Moondust is so cool and great (like me). Moondust has a great community (me) which is always friendly. Join pretty please (im cool)" -Frogspot</p>
+<p>"I found MoonDust in 2024 and immediately was drawn to the game mode selection and aura of the hub. Although I started out in creative and messed around with skyblok a bit, MoonDust survival was where I found my most fun! Everyone is welcome in their survival and the world has not reset as long as I’ve played. I’ve amassed a lil kingdom and still continue to build and meet people and play with friends. They’ve also had kitpvp and various other mini games and game modes to explore. The best part by far about MoonDust is the people who play and run it, especially the owners. It is like a community of people who can connect and share and play and fight and just have a great time." -KodeRed_ </p>
+<p>"Moondust is my home. The community is phenomenal; it's one of the calmest and most wholesome servers I've ever played on. There's a bunch of cool stuff to do and awesome conversations to have (except with Flart, he smells). Come on and make some friends!" -Ak3n0 </p>
+</div>
+<footer class="footer">
+  <p>Created and maintained by Joshua and LittlePotato. | contact: mc.moondust@gmail.com</p> 
+</footer>
+</div> <!-- end main div so no html after this -->
+<script>
+var isNavOpen = false;
+
+function toggleNav() {
+  var sidenav = document.getElementById("mySidenav");
+  var main = document.getElementById("main");
+  
+  isNavOpen = !isNavOpen; // Toggle the variable
+  
+  if (isNavOpen) {
+    sidenav.style.width = "250px";
+    main.style.marginLeft = "250px";
+  } else {
+    sidenav.style.width = "0";
+    main.style.marginLeft = "0";
+  }
+}
+        document.addEventListener("DOMContentLoaded", function() {
+            if (window.innerWidth <= 768) {
+                const iframe = document.getElementById('discord-widg');
+                if (iframe) {
+                    iframe.style.display = 'none';
+                }
+            }
+        });
+</script>
+  </body>
+</html>
