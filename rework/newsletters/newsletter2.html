@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-TZ6FFK0HYT"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-TZ6FFK0HYT');
+</script>
+
+	    <link rel="icon" href="../moondust.png" />
+	<title>MoonDust | Newsletter #2</title>
+	    <meta name="description" content="MoonDust is a cozy Minecraft community of silly Minecraft players. We're all here to have a good time and not take things too seriously :3">
+<link rel="stylesheet" href="../style.css"/> 
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script src="https://kit.fontawesome.com/d73a0531d7.js" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
+
+</head>
+<body>	
+<div id="mySidenav" class="sidenav">
+  <a href="../index.html">Home</a>
+     <a href="../About.html">About</a>
+      <a href="../staff.html">Staff</a>
+    <a href="https://moondust.craftingstore.net">Store</a>
+  <a href="../maps.html">Maps</a>
+  <a href="../tinysurvival.html">Tiny Survival</a>
+    <a href="../creativePlots.html">Creative Plots</a>
+  <a href="../newsletters.html">Newsletters</a>
+  <div class="dropdown">
+    <button class="dropbtn">Guides</button>
+      <div class="dropdown-content">
+  <a href="../survivalguide.html">Survival</a>
+  <a href="../hubguide.html">Hub</a>
+  <a href="../guides.html">All guides</a>
+</div>
+</div>
+
+</div>
+	<div id="main" style="padding:0px;">
+<div class='topbar'>
+<ul>
+  <li class="menu-icon"><i class="fa fa-align-justify" style="cursor:pointer" onclick="toggleNav()"></i></li>
+  <li><img src="../moondust.png"></li>
+  <li><p>MoonDust</p></li>
+</ul>
+
+
+</div>
+
+<div id="mainbubbles">
+  <div class="bubbles">
+      <img src="../bubbles.png">
+      <img src="../bubbles.png">
+      <img src="../bubbles.png">
+      <img src="../bubbles.png">
+      <img src="../bubbles.png">
+      <img src="../bubbles.png">
+      <img src="../bubbles.png">
+  </div>
+</div>	
+
+<iframe 
+  src="https://mailchi.mp/b4ea3ca10d51/moondust-weekly-newsletter-8320" 
+  style="border:none; width:100vw; height:95vh;">
+</iframe>
+
+
+<footer class="footer">
+  <p>Created and maintained by Joshua and LittlePotato. | contact: mc.moondust@gmail.com</p> 
+</footer>
+</div> <!-- div main ending so all html before this one -->
+
+<script>
+var isNavOpen = false;
+
+function toggleNav() {
+  var sidenav = document.getElementById("mySidenav");
+  var main = document.getElementById("main");
+  
+  isNavOpen = !isNavOpen; // Toggle the variable
+  
+  if (isNavOpen) {
+    sidenav.style.width = "250px";
+    main.style.marginLeft = "250px";
+  } else {
+    sidenav.style.width = "0";
+    main.style.marginLeft = "0";
+  }
+}
+        document.addEventListener("DOMContentLoaded", function() {
+            if (window.innerWidth <= 768) {
+                const iframe = document.getElementById('discord-widg');
+                if (iframe) {
+                    iframe.style.display = 'none';
+                }
+            }
+        });
+</script>
+</body>
+</html>

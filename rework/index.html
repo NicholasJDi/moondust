@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<!-- Google tag (gtag.js) -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=G-TZ6FFK0HYT"></script>
+	<script>
+		window.dataLayer = window.dataLayer || [];
+		function gtag(){dataLayer.push(arguments);}
+		gtag('js', new Date());
+		gtag('config', 'G-TZ6FFK0HYT');
+	</script>
+
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>MoonDust | Home</title>
+	<link rel="icon" href="data/moondust.png" />
+	<meta name="description" content="MoonDust is a cozy Minecraft community of silly Minecraft players. We're all here to have a good time and not take things too seriously :3">
+	<link rel="stylesheet" href="data/style.css"/> 
+	<link rel="stylesheet" href="data/layout.css">
+	<link rel="stylesheet" href="data/layout.css" type="text/css" media="all">
+	<script defer src="data/sidebar.js"></script>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<script src="https://kit.fontawesome.com/d73a0531d7.js" crossorigin="anonymous"></script>
+	<script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
+</head>
+<body>	
+	<div class="sidebar">
+		<a href="index.html">Home</a>
+		<a href="About.html">About</a>
+		<a href="staff.html">Staff</a>
+		<a href="https://moondust.craftingstore.net">Store</a>
+		<a href="maps.html">Maps</a>
+		<a href="tinysurvival.html">Tiny Survival</a>
+		<a href="creativePlots.html">Creative Plots</a>
+		<a href="newsletters.html">Newsletters</a>
+		<div class="dropdown">
+		<button class="dropbtn">Guides</button>
+		<div class="dropdown-content">
+			<a href="survivalguide.html">Survival</a>
+			<a href="hubguide.html">Hub</a>
+			<a href="guides.html">All guides</a>
+		</div>
+		</div>
+	</div>
+	
+	<div class="content">
+		<div class='topbar'>
+		<ul>
+			<li class="sidebar-toggle"><i class="fa fa-align-justify" style="cursor:pointer" onclick="toggleNav()"></i></li>
+			<li><img src="moondust.png"></li>
+			<li><p>MoonDust</p></li>
+		</ul>
+		</div>
+
+	<div id="mainbubbles">
+		<div class="bubbles">
+			<img src="bubbles.png">
+			<img src="bubbles.png">
+			<img src="bubbles.png">
+			<img src="bubbles.png">
+			<img src="bubbles.png">
+			<img src="bubbles.png">
+			<img src="bubbles.png">
+		</div>
+	</div>	
+	
+	<div id="copyMessage" style="display: none; color: white; text-align: center; position: fixed; top: 11.5%; left: 50%; transform: translateX(-50%); background-color: rgba(0, 0, 0, 0.8); color: white; padding: 10px; border-radius: 5px; z-index: 3;">Copied IP</div>
+
+		<div class ="box">
+
+		<div class ="title">
+			<p> MoonDust</p>
+		</div>
+
+				<div class="subtitle">
+
+		<p2 onclick="copyToClipboard()">ip - moondustmc.com</p2>
+
+		<script>
+				function copyToClipboard() {
+						// Specify the text to be copied
+						var textToCopy = "moondustmc.com";
+
+						// Create a temporary textarea element
+						var tempTextArea = document.createElement("textarea");
+
+						// Set the value of the textarea to the specified text
+						tempTextArea.value = textToCopy;
+
+						// Append the textarea to the document
+						document.body.appendChild(tempTextArea);
+
+						// Select the text in the textarea
+						tempTextArea.select();
+
+						// Execute the copy command
+						document.execCommand("copy");
+
+						// Remove the temporary textarea
+						document.body.removeChild(tempTextArea);
+
+						// Display the copy message
+						var copyMessage = document.getElementById("copyMessage");
+						copyMessage.style.display = "block";
+
+						// Optionally, hide the message after a few seconds
+						setTimeout(function () {
+								copyMessage.style.display = "none";
+						}, 1100);
+				}
+		</script>
+				</div>
+
+			<div class ="border-gradient2 border-gradient-purple2"><div class ="titleimg">
+				<div class ="namemc">
+					<a href="https://www.planetminecraft.com/group/moondust/" target="_blank"><img src="https://i.imgur.com/eajZGg9.png" alt="namemc">
+					</div>
+				<div class = "youtube">
+					<a href="https://www.youtube.com/@moondustserver" target="_blank"><img src="https://i.imgur.com/XN0leWW.png" alt="youtube">
+					</a>
+									</div>
+				<div class = "discordimg">
+					<a href="https://discord.gg/9krADvkx3v" target="_blank"><img src="https://i.imgur.com/a0JrwTL.png" alt="discordimg">
+					</a>
+
+			</div>
+
+
+			</div>
+		</div>
+	</div>
+		<div class ="discord">
+			<iframe src="https://discord.com/widget?id=801332249979125790&theme=dark" width="260" height="400" allowtransparency="true" frameborder="0" sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts" id="discord-widg"></iframe>
+		</div>
+		<footer class="footer">
+			<p>Created and maintained by Joshua and LittlePotato. | contact: mc.moondust@gmail.com</p> 
+		</footer>
+	</div>
+</body>
+</html>
