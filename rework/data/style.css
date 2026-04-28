@@ -61,16 +61,12 @@ body {
 .moondust-title { padding-left: 0.4em; }
 
 .sidebar {
-	opacity: 0.8;
-	width: 0;
 	position: fixed;
-	z-index: 1;
-	top: 0;
-	left: 0;
 	background-color: #27104e;
+	padding-top: 1em;
 	overflow-x: hidden;
 	transition: 0.5s;
-	padding-top: 0.5em;
+	opacity: 0.8;
 }
 
 .sidebar a {
@@ -128,14 +124,20 @@ body {
 	padding: 16px;
 }
 
-ul {
-	list-style-type: none;
+.bottombar {
+	font-size:16px;
+	text-align:center;
+	background-color:#27104E;
 }
 
 .discord {
 	position: absolute;
 	right: 0;
 	bottom: 0;
+}
+
+ul {
+	list-style-type: none;
 }
 
 li img {
@@ -255,83 +257,6 @@ a {
 	.sidebar a {font-size: 18px;}
 }
 
-.survivalmap {
-	background-color: #27104e;
-	text-align: center;
-	background-image:url(backgroundsurvival.png);
-	margin-top:1.7%;
-	padding:100px 10px;
-	background-repeat: no-repeat;
-	background-size:cover;
-	border:solid #27104e 3px;
-	transition: 0.5s;
-}
-
-.skyblockmap {
-	background-color: #27104e;
-	text-align: center;
-	border:solid #27104e 3px;
-	margin-top:1.7%;
-	padding:100px 10px;
-	background-image:url(backgroundskyblock.png);
-	background-repeat: no-repeat;
-	background-size:cover;
-	transition: 0.5s;
-}
-
-.creativemap {
-	text-align: center;
-	background-image:url(backgroundcreative.png);
-	background-repeat: no-repeat;
-	background-size:cover;
-	margin-top:1.7%;
-	padding:100px 10px;
-	background-color: white;
-	border:solid #27104e 3px;
-	transition: 0.5s;
-}
-
-.tinymap {
-	background-color: #27104e;
-	text-align: center;
-	border:solid #27104e 3px;
-	margin-top:1.7%;
-	padding:100px 10px;
-	background-image:url(backgroundtiny.png);
-	background-repeat: no-repeat;
-	background-size:cover;
-	transition: 0.5s;
-}
-
-.tinymap2 {
-	background-color: #27104e;
-	text-align: center;
-	border:solid #27104e 3px;
-	margin-top:1.7%;
-	padding:100px 10px;
-	background-image:url(backgroundtiny2.png);
-	background-repeat: no-repeat;
-	background-size:cover;
-	transition: 0.5s;
-}
-
-.tinymap3 {
-	background-color: #27104e;
-	text-align: center;
-	border:solid #27104e 3px;
-	margin-top:1.7%;
-	padding:100px 10px;
-	background-image:url(tinys4.png);
-	 background-repeat: no-repeat;
-	background-size:auto;
-	transition: 0.5s;
-}
-
-.survivalmap:hover, .creativemap:hover, .skyblockmap:hover, .tinymap:hover, .tinymap2:hover, .tinymap3:hover {
-	color: #7c5ca1; /* Change text color on hover */
-	transition: 0.5s;
-}
-
 .staffers {
 	transform: translate(-19%, 1.5%); /* Shift the layout slightly to the left */
 	display: flex;
@@ -439,18 +364,50 @@ a {
 	word-wrap: break-word;
 }
 
-.about {
-	position:absolute;
-	top:4vh;
-	word-wrap: break-word;
+/* maps */
+.map {
+	text-align: center;
+	color: #8e69b9;
+	background-color: #27104E;
+	background-size:cover;
+	background-repeat: no-repeat;
+	background-position: center;
+	border: 3px #27104e solid;
+	padding: 100px 10px;
+	margin: 20px 0;
+	text-shadow:
+		-1px -1px 0 #3b1b72,
+		 1px -1px 0 #3b1b72,
+		-1px  1px 0 #3b1b72,
+		 1px  1px 0 #3b1b72;
+	transition: color 0.3s, text-shadow 0.3s;
 }
-.about p {
-	font-size: 19px;
+
+.map.survival {
+	background-image:url(backgrounds/survival.png);
+	margin-top: 0;
 }
-.bottombar {
-	font-size:16px;
-	text-align:center;
-	background-color:#27104E;
+
+.map.skyblock {
+	background-image:url(backgrounds/skyblock.png);
+}
+
+.map.creative {
+	background-image:url(backgrounds/creative.png);
+}
+
+.map.tiny {
+	background-image:url(backgrounds/tiny.png);
+	margin-bottom: 0;
+}
+
+.map:hover {
+	color: #9d76ca;
+	text-shadow:
+	-1px -1px 0 #27104E,
+	1px -1px 0 #27104E,
+	-1px  1px 0 #27104E,
+	1px  1px 0 #27104E;
 }
 
 /* newsletters */
