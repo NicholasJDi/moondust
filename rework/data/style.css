@@ -260,6 +260,13 @@ img { /* No img drag or highlight */
 }
 
 /* staff */
+body:has(.staff-page) {
+	background-image: url(backgrounds/staff.png);
+	background-position: top var(--topbar-size) center;
+}
+
+.content:has(.staff-page) { background-color: rgba(0, 0, 0, 0.2); }
+
 .staff-page {
 	display: grid;
 	grid-template-columns: repeat(auto-fit, minmax(min(24em, 100%), 1fr));
@@ -386,6 +393,9 @@ img { /* No img drag or highlight */
 	width:100%;
 	padding-top:2.76%;
 }
+
+body:has(.about) { background-image: url(backgrounds/about.png); }
+.content.about { background-color: rgba(0, 0, 0, 0.4); }
 
 @keyframes tada {
 	from {
