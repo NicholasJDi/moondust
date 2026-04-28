@@ -15,46 +15,22 @@
 	box-sizing: border-box;
 }
 
-
 body {
-	max-width: 100%;
-	overflow: hidden;
-
+	font-family: "Minecraft Regular", Helvetica, sans-serif;
+	font-size: 1.2rem;
+	color: #d0c5e6;
 	background-image: url("backgrounds/moondust.png");
-	background-size: cover;        /* ⬅ fills the screen */
-	background-position: center;   /* ⬅ keeps it centered */
-	background-repeat: no-repeat;  /* ⬅ no tiling */
-	background-attachment: fixed;  /* optional: parallax-like effect */
-
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	scrollbar-color: #9D72ED #27104E;
+	max-width: 100%;
 	margin: 0;
 	padding: 0;
-	font-family: "Minecraft Regular", Helvetica, sans-serif;
-	color: #d0c5e6;
 	word-wrap: break-word;
 	overflow-wrap: break-word;
-	scrollbar-color: #9D72ED #27104E;
-}
-
-ul {
-	list-style-type: none;
-}
-
-.discord {
-	position: absolute;
-	right: 0;
-	bottom: 0;
-}
-
-li img {
-	width: 52px;
-	height: auto;
-	padding: 0;
-	margin: 0;
-}
-
-li img:hover{
-	animation: tada;
-	animation-duration: .5s;
+	overflow: hidden;
 }
 
 .topbar {
@@ -85,6 +61,98 @@ li img:hover{
 .moondust-title {
 	padding-left: 0.4em;
 }
+
+.sidebar {
+	opacity: 0.8;
+	width: 0;
+	position: fixed;
+	z-index: 1;
+	top: 0;
+	left: 0;
+	background-color: #27104e;
+	overflow-x: hidden;
+	transition: 0.5s;
+	padding-top: 0.5em;
+}
+
+.sidebar a {
+	padding: 8px 8px 8px 32px;
+	text-decoration: none;
+	font-size: 25px;
+	color: #d0c5e6;
+	display: block;
+	transition: color 0.3s;
+}
+
+.sidebar a:hover {
+	color: #7c5ca1;
+}
+
+.dropbtn {
+	padding: 8px 8px 8px 32px;
+	text-decoration: none;
+	font-size: 25px;
+	color: #d0c5e6;
+	display: block;
+	transition: 0.3s;
+	background-color: #27104e;
+	border: none;
+	font-family: "Minecraft Regular", Helvetica, sans-serif;
+}
+
+.dropdown {
+	position: relative;
+	display: inline-block;
+}
+
+.dropdown-content {
+	display: none;
+	position: absolute;
+	min-width: 160px;
+	z-index: 1;
+}
+
+.dropdown-content a {
+	background-color: #d0c5e6;
+	color: #27104e;
+	padding: 8px 8px 8px 32px;
+	text-decoration: none;
+	display: block;
+}
+.dropdown-content a:hover { background-color: #ddd; }
+
+.dropdown:hover .dropdown-content { display: block; cursor: pointer; }
+.dropdown:hover .dropbtn { color: #7c5ca1; cursor: pointer; }
+
+.content {
+	overflow-x: hidden; /* Prevent horizontal scrolling */
+	overflow-y: auto;   /* Allow vertical scrolling */
+	padding: 16px;
+}
+
+ul {
+	list-style-type: none;
+}
+
+.discord {
+	position: absolute;
+	right: 0;
+	bottom: 0;
+}
+
+li img {
+	width: 52px;
+	height: auto;
+	padding: 0;
+	margin: 0;
+}
+
+li img:hover{
+	animation: tada;
+	animation-duration: .5s;
+}
+
+
 
 .dust {
 	width: 100%;
@@ -182,73 +250,7 @@ a {
 	-o-user-select: text;
 }
 
-.sidebar {
-	opacity: 0.8;
-	width: 0;
-	position: fixed;
-	z-index: 1;
-	top: 0;
-	left: 0;
-	background-color: #27104e;
-	overflow-x: hidden;
-	transition: 0.5s;
-	padding-top: 0.5em;
-}
 
-.sidebar a {
-	padding: 8px 8px 8px 32px;
-	text-decoration: none;
-	font-size: 25px;
-	color: #d0c5e6;
-	display: block;
-	transition: 0.3s;
-}
-
-.sidebar a:hover {
-	color: #7c5ca1;
-}
-
-.dropbtn {
-	padding: 8px 8px 8px 32px;
-	text-decoration: none;
-	font-size: 25px;
-	color: #d0c5e6;
-	display: block;
-	transition: 0.3s;
-	background-color: #27104e;
-	border: none;
-	font-family: "Minecraft Regular", Helvetica, sans-serif;
-}
-
-.dropdown {
-	position: relative;
-	display: inline-block;
-}
-
-.dropdown-content {
-	display: none;
-	position: absolute;
-	min-width: 160px;
-	z-index: 1;
-}
-
-.dropdown-content a {
-	background-color: #d0c5e6;
-	color: #27104e;
-	padding: 8px 8px 8px 32px;
-	text-decoration: none;
-	display: block;
-}
-.dropdown-content a:hover { background-color: #ddd; }
-
-.dropdown:hover .dropdown-content { display: block; cursor: pointer; }
-.dropdown:hover .dropbtn { color: #7c5ca1; cursor: pointer; }
-
-.content {
-	overflow-x: hidden; /* Prevent horizontal scrolling */
-	overflow-y: auto;   /* Allow vertical scrolling */
-	padding: 16px;
-}
 
 @media screen and (max-height: 450px) {
 	.sidebar {padding-top: 15px;}
@@ -267,7 +269,7 @@ a {
 	transition: 0.5s;
 }
 
-.skyblockmap{
+.skyblockmap {
 	background-color: #27104e;
 	text-align: center;
 	border:solid #27104e 3px;
@@ -279,7 +281,7 @@ a {
 	transition: 0.5s;
 }
 
-.creativemap{
+.creativemap {
 	text-align: center;
 	background-image:url(backgroundcreative.png);
 	background-repeat: no-repeat;
@@ -383,13 +385,13 @@ a {
 	margin: 0 auto;
 }
 
-.blackline{
+.blackline {
 	background-color: black;
 	height: 3px;
 	overflow: hidden;
 	text-align: center;
 }
-.box{
+.box {
 	background-color: rgb(46, 46, 46, .5);
 	width: 50%;
 	height: 175px;
@@ -400,26 +402,26 @@ a {
 	border-image-slice: 1;
 
 }
-.title{
+.title {
 	color: #9D72ED;
 	text-shadow: 5px 5px black;
 	font-size: 40px;
 	text-align: center;
 	margin-top: 20px;
 }
-.subtitle{
+.subtitle {
 	text-align: center;
 	margin-top: -50px;
 		 cursor: pointer;
 
 }
-.subtitle p2{
+.subtitle h2 {
 	font-size: 25px;
 	color: white;
 	text-shadow: 5px 5px black;
 
 }
-.titleimg{
+.link-box {
 	width: 100%;
 	display: flex;
 	flex-direction: row;
@@ -435,25 +437,70 @@ a {
 	animation: tada 0.5s;
 }
 
-.moondust:hover{
-	animation: tada;
-	animation-duration: .5s;
-}
-
-.TinySurvival{
+.TinySurvival {
 	word-wrap: break-word;
 }
 
-.border-gradient2 {
-	border-image-slice: 1;
-	text-align: center;
-	margin-top: 0;
-	margin-left: 3%;
-	margin-right: 3%;
-	min-width: 10%;
+.about {
+	position:absolute;
+	top:4vh;
+	word-wrap: break-word;
 }
-.border-gradient-purple2 {
-	border-image-source: linear-gradient(to right, #7F3EB2 , #5F3EB3);
+.about p {
+	font-size: 19px;
+}
+.bottombar {
+	font-size:16px;
+	text-align:center;
+	background-color:#27104E;
+}
+
+/* newsletters */
+.newsletter-page {
+	padding:0;
+	margin:0;
+}
+
+.newsletter-box {
+	display: flex;
+	flex-direction: column;
+	gap: 0.17em;
+	width: auto;
+	padding: 0;
+	margin: 0%;
+ }
+
+ .newsletter-button {
+	font-family: "Minecraft Regular", Helvetica, sans-serif;
+	color: #d0c5e6;
+	text-decoration: none;
+	text-align: center;
+	background-color: #27104E;
+	display: block;
+	border: 5px solid #180a30;
+	border-radius: 0.25em;
+	width: 13.7em;
+	padding: 0.3%;
+	margin: 0;
+	transition: color 0.5s;
+}
+.newsletter-button:hover {
+	color: #7c5ca1;
+}
+
+.newsletter {
+	border: none;
+	width: 100%;
+	height: 100%;
+}
+
+content:has(.newsletter) { padding: 0; }
+
+/* guides */
+.contentGuides {
+	width:100%;
+	position:fixed;
+	padding-top:2.76%;
 }
 
 @keyframes tada {
@@ -477,63 +524,3 @@ a {
 		transform: scale3d(1, 1, 1);
 	}
 }
-.about{
-	position:absolute;
-	top:4vh;
-	word-wrap: break-word;
-}
-.about p{
-	font-size: 19px;
-}
-.bottombar {
-	font-size:16px;
-	text-align:center;
-	background-color:#27104E;
-}
-
-.newsletters{
-	display:block;
-	padding:0;
-	margin:0;
-	margin-top:4%;
-}
-
-.newsletters p{
-	margin:0;
-	font-size:18px;}
-
-.NewsletterButtons{
-	padding: 0;
-	margin: 0%;
-	width: auto;
-	display:block;
- }
-
-.NewsletterButton{
-	text-decoration:none;
-	text-align:center;
-	width:21%;
-	display:block;
-	padding:0.3%;
-	margin:0;
-	font-size:25px;
-	border-radius:6px;
-	border:5px solid #180a30;
-	font-family: "Minecraft Regular", Helvetica, sans-serif;
-	color: #d0c5e6;
-	background-color:#27104E;
-	transition:0.5s
-}
-
-.NewsletterButton:hover{
-	cursor:pointer;
-	transition:0.5s;
-	color: #7c5ca1; /* Change text color on hover */
-}
-
-.contentGuides{
-	width:100%;
-	position:fixed;
-	padding-top:2.76%;
-}
-

@@ -58,60 +58,27 @@
 		</div>
 	</div>
 	<div class="content">
-		<div id="copyMessage" style="display: none; color: white; text-align: center; position: fixed; top: 11.5%; left: 50%; transform: translateX(-50%); background-color: rgba(0, 0, 0, 0.8); color: white; padding: 10px; border-radius: 5px; z-index: 3;">Copied IP</div>
-		<div class ="box">
-			<div class ="title">
-				<p> MoonDust</p>
-			</div>
-			<div class="subtitle">
-				<p2 onclick="copyToClipboard()">ip - moondustmc.com</p2>
-				<script>
-					function copyToClipboard() {
-						// Specify the text to be copied
-						const textToCopy = "moondustmc.com";
+		<iframe class="newsletter"></iframe>
+		<script>
+			const newsletters = {
+				'signup':'https://mailchi.mp/2d1839e0f294/moondust-newsletter-signup',
+				'1':'https://mailchi.mp/5e9ca04b2932/moondust-weekly-newsletter-001',
+				'2':'https://mailchi.mp/b4ea3ca10d51/moondust-weekly-newsletter-8320',
+				'3':'https://mailchi.mp/90d925fe0600/moondust-weekly-newsletter-26282',
+				'4':'https://mailchi.mp/80272a32e357/moondust-weekly-newsletter-43848'
+			}
+			
+			const newsletter = document.querySelector('.newsletter');
+			
+			const searchParams = new URLSearchParams(window.location.search);
+			const id = searchParams.get('id');
 
-						// Create a temporary textarea element
-						const tempTextArea = document.createElement("textarea");
-
-						// Set the value of the textarea to the specified text
-						tempTextArea.value = textToCopy;
-
-						// Append the textarea to the document
-						document.body.appendChild(tempTextArea);
-
-						// Select the text in the textarea
-						tempTextArea.select();
-
-						// Execute the copy command
-						document.execCommand("copy");
-
-						// Remove the temporary textarea
-						document.body.removeChild(tempTextArea);
-
-						// Display the copy message
-						const copyMessage = document.getElementById("copyMessage");
-						copyMessage.style.display = "block";
-
-						// Optionally, hide the message after a few seconds
-						setTimeout(function () {
-								copyMessage.style.display = "none";
-						}, 1100);
-					}
-				</script>
-			</div>
-			<div class="link-box">
-				<div class=link-button">
-					<a href="https://www.planetminecraft.com/group/moondust" target="_blank"><img src="https://i.imgur.com/eajZGg9.png" alt="PlanetMinecraft"/></a>
-				</div>
-				<div class="link-button">
-					<a href="https://www.youtube.com/@moondustserver" target="_blank"><img src="https://i.imgur.com/XN0leWW.png" alt="YouTube"/></a>
-				</div>
-				<div class="link-button">
-					<a href="https://discord.gg/9krADvkx3v" target="_blank"><img src="https://i.imgur.com/a0JrwTL.png" alt="Discord"/></a>
-				</div>
-			</div>
-		</div>
-		<iframe class="discord" src="https://discord.com/widget?id=801332249979125790&theme=dark" width="260" height="75%" allowtransparency="true" frameborder="0" sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts"></iframe>
+			if (id && newsletters[id])  {
+				newsletter.src = newsletters[id];
+			} else {
+				windowlocation.replace('newsletters.html')
+			}
+		</script>
 	</div>
 	<div class="bottombar">
 		<p>Created and maintained by Joshua and LittlePotato. | contact: mc.moondust@gmail.com</p>
