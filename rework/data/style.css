@@ -453,10 +453,16 @@ a {
 	padding: 0;
 }
 
-/* guides */
+/* misc */
+.application {
+	border: none;
+	width: 60%;
+	height: 110%;
+}
+
 .contentGuides {
-	width:100%;
 	position:fixed;
+	width:100%;
 	padding-top:2.76%;
 }
 
@@ -480,4 +486,12 @@ a {
 	to {
 		transform: scale3d(1, 1, 1);
 	}
+}
+
+@media (max-width: 900px) { /* tablet */
+	.application { width: 100%; }
+}
+
+@media (max-width: 600x) { /* phone */
+
 }

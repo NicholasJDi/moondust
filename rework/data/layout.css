@@ -104,12 +104,6 @@
 	}
 }
 
-@media (max-width:900px) { /* if you change this make sure to update the sidebar.js too */
-	:root{
-		--sidebar-size: 30vw;
-	}
-}
-
 @media (max-width:600px) {
 	:root{
 		--sidebar-size: 100vw;
