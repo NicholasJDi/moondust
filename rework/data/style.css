@@ -64,8 +64,6 @@ body {
 	position: fixed;
 	background-color: #27104e;
 	padding-top: 1em;
-	overflow-x: hidden;
-	transition: 0.5s;
 	opacity: 0.8;
 }
 
@@ -119,9 +117,10 @@ body {
 .dropdown:hover .dropbtn { color: #7c5ca1; cursor: pointer; }
 
 .content {
+	scrollbar-gutter: stable both-edges;
+	padding: 16px;
 	overflow-x: hidden; /* Prevent horizontal scrolling */
 	overflow-y: auto;   /* Allow vertical scrolling */
-	padding: 16px;
 }
 
 .bottombar {
@@ -135,24 +134,6 @@ body {
 	right: 0;
 	bottom: 0;
 }
-
-ul {
-	list-style-type: none;
-}
-
-li img {
-	width: 52px;
-	height: auto;
-	padding: 0;
-	margin: 0;
-}
-
-li img:hover{
-	animation: tada;
-	animation-duration: .5s;
-}
-
-
 
 .dust {
 	width: 100%;
@@ -221,8 +202,8 @@ li img:hover{
 	width: 25px;
 	animation-delay: 0.7s;
 }
-/* No img drag & No highlight */
-img {
+
+img { /* No img drag or highlight */
 	user-select: none;
 	-ms-user-select:none;
 	-moz-user-select: none;
@@ -230,90 +211,7 @@ img {
 	-webkit-user-select: none;
 }
 
-/* Prevent text highlighting for all elements */
-body {
-	user-select: none;
-	-ms-user-select:none;
-	-webkit-user-select: none;
-	-khtml-user-select: none;
-	-moz-user-select: -moz-none;
-	-o-user-select: none;
-}
-
-/* Allow text highlighting for links/hrefs */
-a {
-	user-select: text;
-	-ms-user-select:auto;
-	-webkit-user-select: auto;
-	-khtml-user-select: auto;
-	-moz-user-select: text;
-	-o-user-select: text;
-}
-
-
-
-@media screen and (max-height: 450px) {
-	.sidebar {padding-top: 15px;}
-	.sidebar a {font-size: 18px;}
-}
-
-.staffers {
-	transform: translate(-19%, 1.5%); /* Shift the layout slightly to the left */
-	display: flex;
-	flex-direction: row; /* Arrange columns side by side */
-	justify-content: flex-start; /* Align columns to the left */
-	gap: 10px; /* Add space between the two columns */
-	width: 80%; /* Ensure the container takes up the full width */
-	box-sizing: border-box;
-	margin-left: 4.5%;
-}
-
-.column {
-	flex-wrap: wrap; /* Ensures child elements wrap within the container */
-	display: flex;
-	flex-direction: column; /* Stack staff members vertically */
-	gap: 0px; /* Space between staff members */
-	width: 50%; /* Make each column take up 50% of the width */
-	box-sizing: border-box;
-	align-items: center; /* Center each staffer in the column */
-}
-
-.right-column-wrapper {
-	margin-left: 32%; /* Move the right column further to the right */
-}
-
-.staffer {
-	word-wrap: break-word; /* For older browsers */
-	overflow-wrap: break-word; /* For newer browsers */
-	flex: 1 1 auto;
-	text-align: center;
-	box-sizing: border-box;
-	max-width: 200px;
-}
-
-.staffer h1, .staffer h2 {
-	margin: 0;
-	white-space: nowrap; /* Keep text on one line */
-	z-index: 1;
-}
-
-.staffer h3 {
-	z-index: 1;
-}
-
-.staffer img {
-	max-width: 30%;
-	height: auto;
-	display: block;
-	margin: 0 auto;
-}
-
-.blackline {
-	background-color: black;
-	height: 3px;
-	overflow: hidden;
-	text-align: center;
-}
+/* home */
 .box {
 	background-color: rgb(46, 46, 46, .5);
 	width: 50%;
@@ -323,8 +221,8 @@ a {
 	margin-top: 55px;
 	border: 5px solid #27104e;
 	border-image-slice: 1;
-
 }
+
 .title {
 	color: #9D72ED;
 	text-shadow: 5px 5px black;
@@ -332,10 +230,11 @@ a {
 	text-align: center;
 	margin-top: 20px;
 }
+
 .subtitle {
 	text-align: center;
 	margin-top: -50px;
-		 cursor: pointer;
+	cursor: pointer;
 
 }
 .subtitle h2 {
@@ -344,6 +243,7 @@ a {
 	text-shadow: 5px 5px black;
 
 }
+
 .link-box {
 	width: 100%;
 	display: flex;
@@ -355,13 +255,32 @@ a {
 .link-button {
 	min-width: 45px;
 }
-
 .link-button:hover {
 	animation: tada 0.5s;
 }
 
-.TinySurvival {
-	word-wrap: break-word;
+/* staff */
+.staff-page {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(24em, 1fr));
+	gap: 2em;
+}
+
+.staff-member {
+	box-sizing: border-box;
+	text-align: center;
+	word-wrap: normal; /* For older browsers */
+	overflow-wrap: normal; /* For newer browsers */
+}
+
+.staff-member h1, .staff-member h2 {
+	margin: 0;
+}
+
+.staff-member img {
+	height: 2em;
+	display: block;
+	margin: 0 auto;
 }
 
 /* maps */
@@ -457,7 +376,7 @@ a {
 .application {
 	border: none;
 	width: 60%;
-	height: 110%;
+	height: 100%;
 }
 
 .contentGuides {
@@ -486,6 +405,11 @@ a {
 	to {
 		transform: scale3d(1, 1, 1);
 	}
+}
+
+@media screen and (max-height: 450px) {
+	.sidebar {padding-top: 15px;}
+	.sidebar a {font-size: 18px;}
 }
 
 @media (max-width: 900px) { /* tablet */
