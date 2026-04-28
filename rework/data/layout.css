@@ -3,7 +3,7 @@
 	--sidebar-size: 15rem;    /* the width of the sidebar */
 	--topbar-size: 3rem;      /* space above the sidebar */
 	--bottombar-size: 2.6rem; /* space below the sidebar */
-	--sidebar-time: 0.3s;     /* how long it takes the sidebar to move into position */
+	--sidebar-time: 0.5s;     /* how long it takes the sidebar to move into position */
 }
 
 .topbar {
