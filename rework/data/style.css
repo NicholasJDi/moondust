@@ -261,7 +261,7 @@ img { /* No img drag or highlight */
 /* staff */
 .staff-page {
 	display: grid;
-	grid-template-columns: repeat(auto-fit, minmax(min(24em, 100%), 1fr));
+	grid-template-columns: repeat(auto-fit, minmax(min(22em, 100%), 1fr));
 	gap: 2em;
 }
 
