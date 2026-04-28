@@ -18,6 +18,7 @@
 body {
 	font-family: "Minecraft Regular", Helvetica, sans-serif;
 	font-size: 1.2rem;
+	text-wrap: balance;
 	color: #d0c5e6;
 	background-image: url("backgrounds/moondust.png");
 	background-size: cover;
@@ -28,8 +29,6 @@ body {
 	max-width: 100%;
 	margin: 0;
 	padding: 0;
-	word-wrap: break-word;
-	overflow-wrap: break-word;
 	overflow: hidden;
 }
 
@@ -262,12 +261,11 @@ img { /* No img drag or highlight */
 /* staff */
 .staff-page {
 	display: grid;
-	grid-template-columns: repeat(auto-fit, minmax(24em, 1fr));
+	grid-template-columns: repeat(auto-fit, minmax(min(24em, 100%), 1fr));
 	gap: 2em;
 }
 
 .staff-member {
-	box-sizing: border-box;
 	text-align: center;
 	word-wrap: normal; /* For older browsers */
 	overflow-wrap: normal; /* For newer browsers */
@@ -275,6 +273,11 @@ img { /* No img drag or highlight */
 
 .staff-member h1, .staff-member h2 {
 	margin: 0;
+}
+
+.staff-member h3 {
+	text-wrap: balance;
+	hyphens: auto;
 }
 
 .staff-member img {
