@@ -64,6 +64,8 @@ body {
 	background-color: #27104e;
 	padding-top: 1em;
 	opacity: 0.8;
+	overflow-x: hidden;
+	overflow-y: auto;
 }
 
 .sidebar a {
@@ -118,8 +120,7 @@ body {
 .content {
 	scrollbar-gutter: stable both-edges;
 	padding: 16px;
-	overflow-x: hidden; /* Prevent horizontal scrolling */
-	overflow-y: auto;   /* Allow vertical scrolling */
+	overflow: auto;
 }
 
 .bottombar {
@@ -271,9 +272,7 @@ img { /* No img drag or highlight */
 	overflow-wrap: normal; /* For newer browsers */
 }
 
-.staff-member h1, .staff-member h2 {
-	margin: 0;
-}
+.staff-member h1, .staff-member h2 { margin: 0; }
 
 .staff-member h3 {
 	text-wrap: balance;
