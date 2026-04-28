@@ -58,9 +58,7 @@ body {
 }
 .moondust-logo:hover { animation: tada 0.5s;}
 
-.moondust-title {
-	padding-left: 0.4em;
-}
+.moondust-title { padding-left: 0.4em; }
 
 .sidebar {
 	opacity: 0.8;
@@ -484,9 +482,7 @@ a {
 	margin: 0;
 	transition: color 0.5s;
 }
-.newsletter-button:hover {
-	color: #7c5ca1;
-}
+.newsletter-button:hover { color: #7c5ca1; }
 
 .newsletter {
 	font-size: 1rem;
