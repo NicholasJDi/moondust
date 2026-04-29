@@ -1,0 +1,124 @@
+:root{
+	/* root variables */
+	--sidebar-size: 15rem;    /* the width of the sidebar */
+	--topbar-size: 3rem;      /* space above the sidebar */
+	--bottombar-size: 2.6rem; /* space below the sidebar */
+	--sidebar-time: 0.5s;     /* how long it takes the sidebar to move into position */
+}
+
+.topbar {
+	position: fixed;
+	box-sizing: border-box;
+	top: 0;
+	left: 0;
+	right: 0;
+	height: var(--topbar-size);
+	z-index: 999;
+}
+
+.bottombar {
+	position: fixed;
+	box-sizing: border-box;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	height: var(--bottombar-size);
+	z-index: 999;
+}
+
+.sidebar {
+	position: fixed;
+	box-sizing: border-box;
+	top: var(--topbar-size);
+	bottom: var(--bottombar-size);
+	width: var(--sidebar-size);
+	z-index: 999;
+}
+
+.sidebar.open { animation: sidebar-in var(--sidebar-time) forwards; }
+.sidebar:not(.open) { animation: sidebar-out var(--sidebar-time) forwards; }
+
+.sidebar:not(.swap) { right: unset !important; }
+.sidebar.swap { left: unset !important; }
+
+.sidebar.no-anim { animation-duration: 0s !important; }
+
+.content {
+	position: fixed;
+	box-sizing: border-box;
+	top: var(--topbar-size);
+	left: 0;
+	right: 0;
+	bottom: var(--bottombar-size);
+}
+
+.sidebar.open ~ .content { animation: content-in var(--sidebar-time) forwards; }
+.sidebar:not(.open) ~ .content { animation: content-out var(--sidebar-time) forwards; }
+
+.sidebar:not(.swap) ~ .content { right: 0 !important; }
+.sidebar.swap ~ .content { left: 0 !important; }
+
+.sidebar.no-anim ~ .content { animation-duration: 0s !important; }
+
+@keyframes sidebar-in {
+	from {
+		left: calc(var(--sidebar-size) * -1);
+		right: calc(var(--sidebar-size) * -1);
+	}
+	to {
+		left: 0;
+		right: 0;
+	}
+}
+
+@keyframes sidebar-out {
+	from {
+		left: 0;
+		right: 0;
+	}
+	to {
+		left: calc(var(--sidebar-size) * -1);
+		right: calc(var(--sidebar-size) * -1);
+	}
+}
+
+@keyframes content-in {
+	from {
+		left: 0;
+		right: 0;
+	}
+	to {
+		left: calc(var(--sidebar-size));
+		right: calc(var(--sidebar-size));
+	}
+}
+
+@keyframes content-out {
+	from {
+		left: calc(var(--sidebar-size));
+		right: calc(var(--sidebar-size));
+	}
+	to {
+		left: 0;
+		right: 0;
+	}
+}
+
+@media (max-width:600px) {
+	:root{
+		--sidebar-size: 100vw;
+	}
+	.sidebar { border: none !important; }
+	.content {
+		animation: none !important;
+	}
+}
+
+@media (prefers-reduced-motion: reduce) {
+	.sidebar {
+		animation-duration: 0s !important;
+	}
+	.content {
+		animation-duration: 0s !important;
+	}
+}
