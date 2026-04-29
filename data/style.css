@@ -272,7 +272,7 @@ body:has(.staff-page) .background {
 	right: 0;
 }
 
-.content:has(.staff-page) { background-color: rgba(0, 0, 0, 0.3); }
+.content:has(.staff-page) { background-color: rgba(0, 0, 0, 0.2); }
 
 .staff-page {
 	display: grid;
@@ -284,6 +284,11 @@ body:has(.staff-page) .background {
 	text-align: center;
 	word-wrap: normal; /* For older browsers */
 	overflow-wrap: normal; /* For newer browsers */
+	text-shadow:
+		-1px -1px 0 #27104E,
+		 1px -1px 0 #27104E,
+		-1px  1px 0 #27104E,
+		 1px  1px 0 #27104E;
 }
 
 .staff-member h1, .staff-member h2 { margin: 0; }
@@ -339,10 +344,10 @@ body:has(.staff-page) .background {
 .map:hover {
 	color: #9d76ca;
 	text-shadow:
-	-1px -1px 0 #27104E,
-	1px -1px 0 #27104E,
-	-1px  1px 0 #27104E,
-	1px  1px 0 #27104E;
+		-1px -1px 0 #27104E,
+		 1px -1px 0 #27104E,
+		-1px  1px 0 #27104E,
+		 1px  1px 0 #27104E;
 }
 
 /* newsletters and other button lists (archive) */
@@ -398,7 +403,7 @@ body:has(.staff-page) .background {
 }
 
 body:has(.about) { background-image: url(backgrounds/about.png); }
-.content.about { background-color: rgba(0, 0, 0, 0.45); }
+.content.about { background-color: rgba(0, 0, 0, 0.4); }
 
 @keyframes tada {
 	from {
