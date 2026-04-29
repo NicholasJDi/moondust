@@ -272,7 +272,7 @@ body:has(.staff-page) .background {
 	right: 0;
 }
 
-.content:has(.staff-page) { background-color: rgba(0, 0, 0, 0.2); }
+.content:has(.staff-page) { background-color: rgba(0, 0, 0, 0.3); }
 
 .staff-page {
 	display: grid;
@@ -398,7 +398,7 @@ body:has(.staff-page) .background {
 }
 
 body:has(.about) { background-image: url(backgrounds/about.png); }
-.content.about { background-color: rgba(0, 0, 0, 0.4); }
+.content.about { background-color: rgba(0, 0, 0, 0.45); }
 
 @keyframes tada {
 	from {

@@ -104,14 +104,13 @@
 	}
 }
 
+@media (max-width:900px) {
+	.content { animation: none !important; }
+}
+
 @media (max-width:600px) {
-	:root{
-		--sidebar-size: 100vw;
-	}
+	:root{ --sidebar-size: 100vw; }
 	.sidebar { border: none !important; }
-	.content {
-		animation: none !important;
-	}
 }
 
 @media (prefers-reduced-motion: reduce) {
