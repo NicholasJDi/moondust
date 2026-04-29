@@ -260,9 +260,16 @@ img { /* No img drag or highlight */
 }
 
 /* staff */
-body:has(.staff-page) {
+body:has(.staff-page) .background {
+	position: fixed;
 	background-image: url(backgrounds/staff.png);
-	background-position: top var(--topbar-size) center;
+	background-size: cover;
+	background-position: top center;
+	background-repeat: no-repeat;
+	top: var(--topbar-size);
+	bottom: var(--bottombar-size);
+	left: 0;
+	right: 0;
 }
 
 .content:has(.staff-page) { background-color: rgba(0, 0, 0, 0.2); }
