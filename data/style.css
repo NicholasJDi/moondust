@@ -76,46 +76,9 @@ body {
 	display: block;
 	transition: color 0.3s;
 }
-
 .sidebar a:hover {
 	color: #7c5ca1;
 }
-
-.dropbtn {
-	padding: 8px 8px 8px 32px;
-	text-decoration: none;
-	font-size: 25px;
-	color: #d0c5e6;
-	display: block;
-	transition: 0.3s;
-	background-color: #27104e;
-	border: none;
-	font-family: "Minecraft Regular", Helvetica, sans-serif;
-}
-
-.dropdown {
-	position: relative;
-	display: inline-block;
-}
-
-.dropdown-content {
-	display: none;
-	position: absolute;
-	min-width: 160px;
-	z-index: 1;
-}
-
-.dropdown-content a {
-	background-color: #d0c5e6;
-	color: #27104e;
-	padding: 8px 8px 8px 32px;
-	text-decoration: none;
-	display: block;
-}
-.dropdown-content a:hover { background-color: #ddd; }
-
-.dropdown:hover .dropdown-content { display: block; cursor: pointer; }
-.dropdown:hover .dropbtn { color: #7c5ca1; cursor: pointer; }
 
 .content {
 	scrollbar-gutter: stable both-edges;
@@ -275,12 +238,6 @@ body:has(.staff-page) .background {
 .content:has(.staff-page) { background-color: rgba(0, 0, 0, 0.2); }
 
 .staff-page {
-	display: grid;
-	grid-template-columns: repeat(auto-fit, minmax(min(24em, 100%), 1fr));
-	gap: 2em;
-}
-
-.staff-member {
 	text-align: center;
 	word-wrap: normal; /* For older browsers */
 	overflow-wrap: normal; /* For newer browsers */
@@ -289,6 +246,9 @@ body:has(.staff-page) .background {
 		 1px -1px 0 #27104E,
 		-1px  1px 0 #27104E,
 		 1px  1px 0 #27104E;
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(min(24em, 100%), 1fr));
+	gap: 2em;
 }
 
 .staff-member h1, .staff-member h2 { margin: 0; }
@@ -322,6 +282,14 @@ body:has(.staff-page) .background {
 		 1px  1px 0 #3b1b72;
 	transition: color 0.3s, text-shadow 0.3s;
 }
+.map:hover {
+	color: #9d76ca;
+	text-shadow:
+		-1px -1px 0 #27104E,
+		 1px -1px 0 #27104E,
+		-1px  1px 0 #27104E,
+		 1px  1px 0 #27104E;
+}
 
 .map.survival {
 	background-image:url(backgrounds/survival.png);
@@ -339,15 +307,6 @@ body:has(.staff-page) .background {
 .map.tiny {
 	background-image:url(backgrounds/tiny.png);
 	margin-bottom: 0;
-}
-
-.map:hover {
-	color: #9d76ca;
-	text-shadow:
-		-1px -1px 0 #27104E,
-		 1px -1px 0 #27104E,
-		-1px  1px 0 #27104E,
-		 1px  1px 0 #27104E;
 }
 
 /* newsletters and other button lists (archive) */
