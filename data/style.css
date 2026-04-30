@@ -35,6 +35,8 @@ img {
 	user-select: none;
 }
 
+.title { margin-top: 0.1em; }
+
 .dust {/* i'm going to rework how dust works, for now it doesn't exist */
 	display: none;
 }
@@ -196,6 +198,7 @@ body:has(.staff-page) .background {
 	display: grid;
 	grid-template-columns: repeat(auto-fit, minmax(min(22em, 100%), 1fr));
 	gap: 2em;
+	padding-top: 0.3em;
 }
 
 .staff-member h1, .staff-member h2 { margin: 0; }
