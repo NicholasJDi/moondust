@@ -10,11 +10,6 @@
 	font-style: normal;
 }
 
-* {
-	padding:0;
-	box-sizing: border-box;
-}
-
 body {
 	font-family: "Minecraft Regular", Helvetica, sans-serif;
 	font-size: 1.2rem;
@@ -26,12 +21,25 @@ body {
 	background-repeat: no-repeat;
 	background-attachment: fixed;
 	scrollbar-color: #9D72ED #27104E;
-	max-width: 100%;
 	margin: 0;
 	padding: 0;
 	overflow: hidden;
 }
 
+* {
+	padding:0;
+	box-sizing: border-box;
+}
+
+img {
+	user-select: none;
+}
+
+.dust {/* i'm going to rework how dust works, for now it doesn't exist */
+	display: none;
+}
+
+/* layout */
 .topbar {
 	color: #d0c5e6;
 	background-color: #27104E;
@@ -60,166 +68,105 @@ body {
 .moondust-title { padding-left: 0.4em; }
 
 .sidebar {
+	font-size: calc(var(--sidebar-size) / 10);
 	position: fixed;
 	background-color: #27104e;
-	padding-top: 1em;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-evenly;
+	gap: 0.3em;
+	padding-top: 0.5em;
+	padding-bottom: 0.3em;
+	padding-left: 1.2em;
 	opacity: 0.8;
-	overflow-x: hidden;
 	overflow-y: auto;
 }
 
 .sidebar a {
-	padding: 8px 8px 8px 32px;
 	text-decoration: none;
-	font-size: 25px;
 	color: #d0c5e6;
-	display: block;
 	transition: color 0.3s;
 }
 .sidebar a:hover {
 	color: #7c5ca1;
 }
 
-.content {
-	scrollbar-gutter: stable both-edges;
-	padding: 16px;
-	overflow: auto;
-}
-
 .bottombar {
-	font-size:16px;
-	text-align:center;
+	font-size: 0.75em;
+	text-align: center;
+	display: flex;
+	align-items: center;
+	justify-content: center;
 	background-color:#27104E;
 }
 
+.bottombar p { margin: 0;}
+
+.content {
+	scrollbar-gutter: stable both-edges;
+	padding: 0.8em;
+	overflow: auto;
+}
+
+/* home */
 .discord {
 	position: absolute;
 	right: 0;
 	bottom: 0;
 }
 
-.dust {
-	width: 100%;
-	display: flex;
+.content:has(.home) {
+	display:flex;
+	justify-content: center;
 	align-items: center;
-	justify-content: space-around;
-	position: fixed;
-	bottom: 0;
-	left: 0;
-	padding: 10px 0;
 }
 
-.dust img {
-	width: 50px;
-	animation: dust 5s linear infinite;
-}
-
-@keyframes dust {
-	0% {
-			transform: translateY(-80vh);
-			opacity: 0;
-	}
-	50% {
-			opacity: 1;
-	}
-	70% {
-			opacity: 1;
-	}
-	100% {
-			transform: translateY(0);
-			opacity: 0;
-	}
-}
-
-.dust img:nth-child(1) {
-	width:35px;
-	animation-delay: 0s;
-}
-
-.dust img:nth-child(2) {
-	width: 51px;
-	animation-delay: 6s;
-}
-
-.dust img:nth-child(3) {
-	width: 41px;
-	animation-delay: 1s;
-}
-
-.dust img:nth-child(4) {
-	width: 31px;
-	animation-delay: 5s;
-}
-
-.dust img:nth-child(5) {
-	width: 21px;
-	animation-delay: 3s;
-}
-
-.dust img:nth-child(6) {
-	width: 50px;
-	animation-delay: 8s;
-}
-
-.dust img:nth-child(7) {
-	width: 25px;
-	animation-delay: 0.7s;
-}
-
-img { /* No img drag or highlight */
-	user-select: none;
-	-ms-user-select:none;
-	-moz-user-select: none;
-	-webkit-user-drag: none;
-	-webkit-user-select: none;
-}
-
-/* home */
-.box {
-	background-color: rgb(46, 46, 46, .5);
-	width: 50%;
-	height: 175px;
+.home {
 	position: relative;
-	margin: auto;
-	margin-top: 55px;
-	border: 5px solid #27104e;
-	border-image-slice: 1;
+	background-color: rgb(46, 46, 46, .5);
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	gap:  0.3em;
+	border: 0.3em solid #27104e;
+	width: 50%;
+	height: 12em;
+	margin-bottom: 3.4em;
 }
 
-.title {
+.home h3 {
+	font-size: 2em;
 	color: #9D72ED;
 	text-shadow: 5px 5px black;
-	font-size: 40px;
-	text-align: center;
-	margin-top: 20px;
+	margin: 0;
 }
 
-.subtitle {
-	text-align: center;
-	margin-top: -50px;
-	cursor: pointer;
-
-}
-.subtitle h2 {
-	font-size: 25px;
+.home p {
+	font-size: 1.2em;
 	color: white;
 	text-shadow: 5px 5px black;
+	margin: 0;
+}
 
+.ip {
+	text-align: center;
+	margin: 0;
+	user-select: none;
+	cursor: pointer;
 }
 
 .link-box {
-	width: 100%;
 	display: flex;
 	flex-direction: row;
 	justify-content: center;
-
+	align-items: center;
+	gap: 0.2em;
+	width: 100%;
 }
 
-.link-button {
-	min-width: 45px;
-}
-.link-button:hover {
-	animation: tada 0.5s;
+.link-box a:hover {
+	animation: tada 0.5;
 }
 
 /* staff */
@@ -247,7 +194,7 @@ body:has(.staff-page) .background {
 		-1px  1px 0 #27104E,
 		 1px  1px 0 #27104E;
 	display: grid;
-	grid-template-columns: repeat(auto-fit, minmax(min(24em, 100%), 1fr));
+	grid-template-columns: repeat(auto-fit, minmax(min(22em, 100%), 1fr));
 	gap: 2em;
 }
 
@@ -272,14 +219,15 @@ body:has(.staff-page) .background {
 	background-size:cover;
 	background-repeat: no-repeat;
 	background-position: center;
-	border: 3px #27104e solid;
-	padding: 100px 10px;
-	margin: 20px 0;
+	border: 0.2em #27104e solid;
+	padding: 4.5em 0.5em;
+	margin: 1em 0;
 	text-shadow:
 		-1px -1px 0 #3b1b72,
 		 1px -1px 0 #3b1b72,
 		-1px  1px 0 #3b1b72,
-		 1px  1px 0 #3b1b72;
+		 1px  1px 0 #3b1b72,
+		 2px  2px 0 transparent;
 	transition: color 0.3s, text-shadow 0.3s;
 }
 .map:hover {
@@ -288,7 +236,8 @@ body:has(.staff-page) .background {
 		-1px -1px 0 #27104E,
 		 1px -1px 0 #27104E,
 		-1px  1px 0 #27104E,
-		 1px  1px 0 #27104E;
+		 1px  1px 0 #27104E,
+		 2px  2px 0 rgba(0, 0, 0, 0.3);
 }
 
 .map.survival {
@@ -326,7 +275,7 @@ body:has(.staff-page) .background {
 	text-align: center;
 	background-color: #27104E;
 	display: block;
-	border: 5px solid #180a30;
+	border: 0.3em solid #180a30;
 	border-radius: 0.25em;
 	width: 13.7em;
 	padding: 0.3%;
@@ -355,12 +304,6 @@ body:has(.staff-page) .background {
 	height: 100%;
 }
 
-.contentGuides {
-	position:fixed;
-	width:100%;
-	padding-top:2.76%;
-}
-
 body:has(.about) { background-image: url(backgrounds/about.png); }
 .content.about { background-color: rgba(0, 0, 0, 0.4); }
 
@@ -386,15 +329,11 @@ body:has(.about) { background-image: url(backgrounds/about.png); }
 	}
 }
 
-@media screen and (max-height: 450px) {
-	.sidebar {padding-top: 15px;}
-	.sidebar a {font-size: 18px;}
-}
-
 @media (max-width: 900px) { /* tablet */
 	.application { width: 100%; }
+	.home { width: 65%; }
 }
 
-@media (max-width: 600x) { /* phone */
-
+@media (max-width: 600px) { /* phone */
+	.home { width: 90%; }
 }
