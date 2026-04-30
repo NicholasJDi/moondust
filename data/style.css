@@ -70,11 +70,11 @@ img {
 .sidebar {
 	font-size: calc(var(--sidebar-size) / 10);
 	position: fixed;
-	background-color: #27104e;
 	display: flex;
 	flex-direction: column;
-	justify-content: space-evenly;
-	gap: 0.3em;
+	justify-content: center;
+	background-color: #27104e;
+	gap: clamp(0.3em, 2.7vh, 0.9em);
 	padding-top: 0.5em;
 	padding-bottom: 0.3em;
 	padding-left: 1.2em;
@@ -166,7 +166,7 @@ img {
 }
 
 .link-box a:hover {
-	animation: tada 0.5;
+	animation: tada 0.5s;
 }
 
 /* staff */
@@ -336,4 +336,8 @@ body:has(.about) { background-image: url(backgrounds/about.png); }
 
 @media (max-width: 600px) { /* phone */
 	.home { width: 90%; }
+}
+
+@media (min-height: 40rem) {
+	.sidebar { justify-content: unset; }
 }
