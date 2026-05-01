@@ -37,8 +37,30 @@ img {
 
 .title { margin-top: 0.1em; }
 
-.dust {/* i'm going to rework how dust works, for now it doesn't exist */
+.dust { position: fixed; }
+
+.dust * {
+	top: 0;
+	left: 0;
+	position: absolute;
 	display: none;
+}
+
+@keyframes dust {
+	from {
+		top: 0vh;
+		opacity: var(--opacity-start);
+		rotate: var(--rotation-start);
+		scale: var(--scale-start);
+		left: var(--position-start)
+	}
+	to {
+		top: 100vh;
+		opacity: var(--opacity-end);
+		rotate: var(--rotation-end);
+		scale: var(--scale-end);
+		left: var(--position-end);
+	}
 }
 
 /* layout */
@@ -74,7 +96,6 @@ img {
 	position: fixed;
 	display: flex;
 	flex-direction: column;
-	justify-content: center;
 	background-color: #27104e;
 	gap: clamp(0.3em, 2.7vh, 0.9em);
 	padding-top: 0.5em;
@@ -341,6 +362,6 @@ body:has(.about) { background-image: url(backgrounds/about.png); }
 	.home { width: 90%; }
 }
 
-@media (min-height: 40rem) {
-	.sidebar { justify-content: unset; }
+@media (max-height: 40rem) {
+	.sidebar { justify-content: center; }
 }
