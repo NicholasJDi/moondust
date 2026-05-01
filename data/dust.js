@@ -50,8 +50,8 @@ function animate(dust) {
 }
 
 for (const dust of particles) {
-	dust.style.animationDelay = `${Math.random() * 5}s`;
 	animate(dust);
+	requestAnimationFrame(() => { dust.style.animationDelay = `${Math.random() * 5}s`; });
 }
 
 dustBox.addEventListener('animationend', (event) => {
